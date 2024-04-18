@@ -1,0 +1,16 @@
+@use 'size';
+
+.stack\:x,
+.stack\:y {
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+}
+
+.stack\:x {
+	flex-direction: row;
+}
+
+.stack\:y {
+	flex-direction: column;
+}

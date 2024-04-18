@@ -1,0 +1,10 @@
+@use 'size';
+
+@each $size-name, $size in size.with-unit-std(1rem) {
+	.shadow\:#{$size-name} {
+		box-shadow:
+			0 calc($size / 1.5) $size oklch(50% 0 0 / 15%),
+			0 calc($size / 3.0) calc($size / 3.0) oklch(50% 0 0 / 12%),
+			0 0 max(1px, calc($size / 4.0)) oklch(50% 0 0 / 10%);
+	}
+}

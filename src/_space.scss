@@ -1,0 +1,49 @@
+@use 'size';
+
+@each $unit-suffix, $size-list in ("": size.with-unit-std(1rem), "-em": size.with-unit-std(1em)) {
+	@each $size-name, $size in $size-list {
+		@each $type, $type-abbr in ("margin": "m", "padding": "p") {
+			@each $side, $side-abbr in ("": "", "-top": "t", "-left": "l", "-bottom": "b", "-right": "r", "-inline-start": "s", "-inline-end": "e") {
+				.#{$type-abbr}#{$side-abbr}#{$unit-suffix}\:#{$size-name} {
+					#{$type}#{$side}: $size;
+				}
+			}
+
+			.#{$type-abbr}x#{$unit-suffix}\:#{$size-name} {
+				#{$type}-left: $size;
+				#{$type}-right: $size;
+			}
+
+			.#{$type-abbr}y#{$unit-suffix}\:#{$size-name} {
+				#{$type}-top: $size;
+				#{$type}-bottom: $size;
+			}
+		}
+
+		@each $axis, $axis-abbr in ("": "", "row-": "y", "column-": "x") {
+			.g#{$axis-abbr}#{$unit-suffix}\:#{$size-name} {
+				#{$axis}gap: $size;
+			}
+		}
+
+		@each $corner, $corner-abbr in ("": "", "-top-left": "tl", "-top-right": "tr", "-bottom-left": "bl", "-bottom-right": "br") {
+			.r#{$corner-abbr}#{$unit-suffix}\:#{$size-name} {
+				border#{$corner}-radius: $size;
+			}
+		}
+
+		@each $y, $y-abbr in ("top": "t", "bottom": "b") {
+			.r#{$y-abbr}#{$unit-suffix}\:#{$size-name} {
+				border-#{$y}-left-radius: $size;
+				border-#{$y}-right-radius: $size;
+			}
+		}
+
+		@each $x, $x-abbr in ("left": "l", "right": "r") {
+			.r#{$x-abbr}#{$unit-suffix}\:#{$size-name} {
+				border-top-#{$x}-radius: $size;
+				border-bottom-#{$x}-radius: $size;
+			}
+		}
+	}
+}

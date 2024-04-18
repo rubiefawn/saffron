@@ -1,0 +1,76 @@
+@use 'sass:map';
+@use 'sass:math';
+
+$φ: math.div(1 + math.sqrt(5), 2);
+
+:root {
+	--φ: #{$φ};
+
+	--sm6: calc(pow(var(--φ), -3.0));
+	--sm5: calc(pow(var(--φ), -2.5));
+	--sm4: calc(pow(var(--φ), -2.0));
+	--sm3: calc(pow(var(--φ), -1.5));
+	--sm2: calc(pow(var(--φ), -1.0));
+	--sm1: calc(pow(var(--φ), -0.5));
+	--lg1: calc(pow(var(--φ), +0.5));
+	--lg2: calc(pow(var(--φ), +1.0));
+	--lg3: calc(pow(var(--φ), +1.5));
+	--lg4: calc(pow(var(--φ), +2.0));
+	--lg5: calc(pow(var(--φ), +2.5));
+	--lg6: calc(pow(var(--φ), +3.0));
+
+	--zs: var(--sm6);
+	--xs: var(--sm4);
+	--sm: var(--sm2);
+	--md: 1.0;
+	--lg: var(--lg2);
+	--xl: var(--lg4);
+	--zl: var(--lg6);
+}
+
+$fine: (
+	"sm6": var(--sm6),
+	"sm5": var(--sm5),
+	"sm4": var(--sm4),
+	"sm3": var(--sm3),
+	"sm2": var(--sm2),
+	"sm1": var(--sm1),
+	"md": var(--md),
+	"lg1": var(--lg1),
+	"lg2": var(--lg2),
+	"lg3": var(--lg3),
+	"lg4": var(--lg4),
+	"lg5": var(--lg5),
+	"lg6": var(--lg6)
+);
+
+$std: (
+	"zs": var(--zs),
+	"xs": var(--xs),
+	"sm": var(--sm),
+	"md": var(--md),
+	"lg": var(--lg),
+	"xl": var(--xl),
+	"zl": var(--zl)
+);
+
+$all: map.merge($fine, $std);
+
+@function with-unit($map, $unit) {
+	$items-with-unit: (
+	);
+
+@each $key, $val in $map {
+	$items-with-unit: map.set($items-with-unit, $key, calc($val * $unit));
+}
+
+@return $items-with-unit;
+}
+
+@function with-unit-std($unit) {
+	@return with-unit($std, $unit);
+}
+
+@function with-unit-fine($unit) {
+	@return with-unit($fine, $unit);
+}
