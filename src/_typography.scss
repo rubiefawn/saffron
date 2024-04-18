@@ -9,11 +9,19 @@
 	--font-stack-monospace: var(--font-monospace), SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", ui-monospace, monospace, var(--font-stack-emoji);
 	--font-stack-fantasy: var(--font-fantasy), fantasy;
 	--font-stack-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", emoji;
+
+	--font-size-zs: 0.625rem;
+	--font-size-xs: 0.875rem;
+	--font-size-sm: 1rem;
+	--font-size-md: 1.5rem;
+	--font-size-lg: 2rem;
+	--font-size-xl: 3rem;
+	--font-size-zl: 4rem;
 }
 
-@each $size-name, $size in ("zs": 0.625rem, "xs": 0.875rem, "sm": 1rem, "md": 1.5rem, "lg": 2rem, "xl": 3rem, "zl": 4rem) {
-	.fs\:#{$size-name} {
-		font-size: $size;
+@each $size in "zs", "xs", "sm", "md", "lg", "xl", "zl" {
+	.fs\:#{$size} {
+		font-size: var(--font-size-#{$size});
 	}
 }
 
@@ -21,4 +29,15 @@
 	.fw\:#{$weight-name} {
 		font-weight: $weight;
 	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	--margin-optical-correction: calc(1em - 1lh);
+	margin-top: var(--margin-optical-correction);
+	margin-bottom: var(--margin-optical-correction);
 }
