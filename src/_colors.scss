@@ -1,0 +1,56 @@
+:root {
+	--fg-base: oklch(30% 0.005 285);
+	--fg-base-dim: oklch(80% 0.0 256);
+	--bg-base: white;
+	--bg-base-focus: oklch(90% 0.005 285);
+	--bg-base-border: var(--bg-base-focus);
+
+	--fg-primary: ;
+	--fg-primary-dim: ;
+	--bg-primary: ;
+	--bg-primary-focus: ;
+	--bg-primary-border: var(--fg-primary-dim);
+
+	--fg-accent: white;
+	--fg-accent-dim: ;
+	--bg-accent: oklch(80% 0.15 180);
+	--bg-accent-focus: oklch(70% 0.15 185);
+
+	--fg-neutral: ;
+	--fg-neutral-dim: ;
+	--bg-neutral: ;
+	--bg-neutral-focus: ;
+	--bg-neutral-border: var(--fg-neutral-dim);
+
+	--fg-info: white;
+	--fg-info-dim: ;
+	--bg-info: ;
+	--bg-info-focus: ;
+	--bg-info-border: var(--fg-info-dim);
+
+	--fg-ok: white;
+	--fg-ok-dim: ;
+	--bg-ok: ;
+	--bg-ok-focus: ;
+	--bg-ok-border: var(--fg-ok-dim);
+
+	--fg-warn: white;
+	--fg-warn-dim: ;
+	--bg-warn: ;
+	--bg-warn-focus: ;
+	--bg-warn-border: var(--fg-warn-dim);
+
+	--fg-error: white;
+	--fg-error-dim: ;
+	--bg-error: ;
+	--bg-error-focus: ;
+	--bg-error-border: var(--fg-error-dim);
+}
+
+:root[theme=dark] {
+	--fg-base: white;
+	--fg-base-dim: oklch(70% 0.02 256);
+	--bg-base: oklch(15% 0.005 285);
+	--bg-base-focus: oklch(30% 0.005 285);
+	--bg-base-border: var(--bg-base-focus);
+}

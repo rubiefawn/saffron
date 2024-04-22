@@ -20,12 +20,6 @@
 			}
 		}
 
-		@each $axis, $axis-abbr in ("": "", "row-": "y", "column-": "x") {
-			.g#{$axis-abbr}#{$unit-suffix}\:#{$size-name} {
-				#{$axis}gap: $size;
-			}
-		}
-
 		@each $corner, $corner-abbr in ("": "", "-top-left": "tl", "-top-right": "tr", "-bottom-left": "bl", "-bottom-right": "br") {
 			.r#{$corner-abbr}#{$unit-suffix}\:#{$size-name} {
 				border#{$corner}-radius: $size;

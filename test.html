@@ -7,45 +7,39 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>phi.css test</title>
 	<!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon"> -->
-	<link rel="stylesheet" href="./normalize.css">
 	<link rel="stylesheet" href="./build/phi.css">
 
 	<style>
+		@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
 		@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 		:root {
-			--grey-0: oklch(12% 0.005 286);
-			--grey-1: oklch(24% 0.005 286);
-			--grey-2: oklch(72% 0.005 286);
+			background-color: var(--bg-base);
+			color: var(--fg-base);
+		}
 
-			background-color: var(--grey-0);
-			color:white;
+		.border {
+			border: 1px solid var(--bg-base-border);
 		}
 	</style>
 </head>
 
 <body>
 	<main>
-		<div class="stack:y p:md g:md">
-			<h1 class="fs:zl ff:serif">Title Test</h1>
-			<div class="stack:y g:md r:sm p:md shadow:md" style="border:1px solid var(--grey-1)">
-				<span class="fs:zs">Font Size zs</span>
-				<span class="fs:xs">Font Size xs</span>
-				<span class="fs:sm">Font Size sm</span>
-				<span class="fs:md">Font Size md</span>
-				<span class="fs:lg">Font Size lg</span>
-				<span class="fs:xl">Font Size xl</span>
-				<span class="fs:zl">Font Size zl</span>
+		<vstack gap=sm class=p:sm>
+			<div class="r:sm p:sm border">
+				<h1>Title Title Title</h1>
 			</div>
-			<div class="stack:y g:md r:sm p:md shadow:md" style="border:1px solid var(--grey-1)">
-				<span class="fs:md" style="color: oklch(calc(50% * var(--sm3)) 0.005 286)">Font Luminance zs</span>
-				<span class="fs:md" style="color: oklch(calc(50% * var(--sm2)) 0.005 286)">Font Luminance xs</span>
-				<span class="fs:md" style="color: oklch(calc(50% * var(--sm1)) 0.005 286)">Font Luminance sm</span>
-				<span class="fs:md" style="color: oklch(50% 0.005 286)">Font Luminance md</span>
-				<span class="fs:md" style="color: oklch(calc(50% * var(--lg1)) 0.005 286)">Font Luminance lg</span>
-				<span class="fs:md" style="color: oklch(calc(50% * var(--lg2)) 0.005 286)">Font Luminance xl</span>
-				<span class="fs:md" style="color: oklch(calc(50% * var(--lg3)) 0.005 286)">Font Luminance zl</span>
-			</div>
+			<vstack gap=md class="r:sm p:md border">
+				<span class=fs:zs style="color: var(--fg-base-dim)">Font Size zs</span>
+				<span class=fs:xs>Font Size xs</span>
+				<span class=fs:sm>Font Size sm</span>
+				<span class=fs:md>Font Size md</span>
+				<span class=fs:lg>Font Size lg</span>
+				<span class=fs:xl>Font Size xl</span>
+				<span class=fs:zl>Font Size zl</span>
+			</vstack>
+		</vstack>
 	</main>
 </body>
 

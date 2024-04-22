@@ -1,0 +1,4 @@
+:where([debug], [debug] *):hover {
+	outline: 1px dashed var(--debug-outline-color, oklch(60% 0.2 240 / 75%));
+	outline-offset: -1px;
+}
