@@ -14,3 +14,15 @@
 .stack\:y {
 	flex-direction: column;
 }
+
+.stack-start {
+	align-self: flex-start;
+}
+
+.stack-end {
+	align-self: flex-end;
+}
+
+.stack-center {
+	align-self: center;
+}

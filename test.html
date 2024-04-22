@@ -11,10 +11,15 @@
 	<link rel="stylesheet" href="./build/phi.css">
 
 	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Shantell+Sans:ital,wght,BNCE,INFM@0,300..800,-100..100,0..100;1,300..800,-100..100,0..100&display=block');
+		@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 		:root {
-			font-family: var(--font-sans-serif);
+			--grey-0: oklch(12% 0.005 286);
+			--grey-1: oklch(24% 0.005 286);
+			--grey-2: oklch(72% 0.005 286);
+
+			background-color: var(--grey-0);
+			color:white;
 		}
 	</style>
 </head>
@@ -22,9 +27,24 @@
 <body>
 	<main>
 		<div class="stack:y p:md g:md">
-			<div class="r:md p:md shadow:md" style="background-color: #051118; color:white;">
-				<h1 class="fs:xl">Test text AEIOU 999</h1>
-				</span>
+			<h1 class="fs:zl ff:serif">Title Test</h1>
+			<div class="stack:y g:md r:sm p:md shadow:md" style="border:1px solid var(--grey-1)">
+				<span class="fs:zs">Font Size zs</span>
+				<span class="fs:xs">Font Size xs</span>
+				<span class="fs:sm">Font Size sm</span>
+				<span class="fs:md">Font Size md</span>
+				<span class="fs:lg">Font Size lg</span>
+				<span class="fs:xl">Font Size xl</span>
+				<span class="fs:zl">Font Size zl</span>
+			</div>
+			<div class="stack:y g:md r:sm p:md shadow:md" style="border:1px solid var(--grey-1)">
+				<span class="fs:md" style="color: oklch(calc(50% * var(--sm3)) 0.005 286)">Font Luminance zs</span>
+				<span class="fs:md" style="color: oklch(calc(50% * var(--sm2)) 0.005 286)">Font Luminance xs</span>
+				<span class="fs:md" style="color: oklch(calc(50% * var(--sm1)) 0.005 286)">Font Luminance sm</span>
+				<span class="fs:md" style="color: oklch(50% 0.005 286)">Font Luminance md</span>
+				<span class="fs:md" style="color: oklch(calc(50% * var(--lg1)) 0.005 286)">Font Luminance lg</span>
+				<span class="fs:md" style="color: oklch(calc(50% * var(--lg2)) 0.005 286)">Font Luminance xl</span>
+				<span class="fs:md" style="color: oklch(calc(50% * var(--lg3)) 0.005 286)">Font Luminance zl</span>
 			</div>
 	</main>
 </body>
