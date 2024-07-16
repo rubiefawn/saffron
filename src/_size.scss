@@ -1,22 +1,22 @@
 @use 'sass:map';
 @use 'sass:math';
 
-$φ: math.div(1 + math.sqrt(5), 2);
-$sm6: math.pow($φ, -3.0);
-$sm5: math.pow($φ, -2.5);
-$sm4: math.pow($φ, -2.0);
-$sm3: math.pow($φ, -1.5);
-$sm2: math.pow($φ, -1.0);
-$sm1: math.pow($φ, -0.5);
-$lg1: math.pow($φ, +0.5);
-$lg2: math.pow($φ, +1.0);
-$lg3: math.pow($φ, +1.5);
-$lg4: math.pow($φ, +2.0);
-$lg5: math.pow($φ, +2.5);
-$lg6: math.pow($φ, +3.0);
+$√2: math.sqrt(2);
+$sm6: math.pow($√2, -3.0);
+$sm5: math.pow($√2, -2.5);
+$sm4: math.pow($√2, -2.0);
+$sm3: math.pow($√2, -1.5);
+$sm2: math.pow($√2, -1.0);
+$sm1: math.pow($√2, -0.5);
+$lg1: math.pow($√2, +0.5);
+$lg2: math.pow($√2, +1.0);
+$lg3: math.pow($√2, +1.5);
+$lg4: math.pow($√2, +2.0);
+$lg5: math.pow($√2, +2.5);
+$lg6: math.pow($√2, +3.0);
 
 :root {
-	--φ: #{$φ};
+	--√2: #{$√2};
 
 	--sm6: #{$sm6};
 	--sm5: #{$sm5};
