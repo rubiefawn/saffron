@@ -1,6 +1,7 @@
 :root {
 	--font-serif: "EB Garamond";
-	--font-sans-serif: Inter;
+	--font-sans-serif: "Inter";
+	--font-display: "Inter Tight";
 	--font-monospace: "Jetbrains Mono";
 	--font-fantasy: "Shantell Sans";
 
@@ -35,4 +36,5 @@
 	--margin-optical-correction: calc(1em - 1lh);
 	margin-top: var(--margin-optical-correction);
 	margin-bottom: var(--margin-optical-correction);
+	font-family: var(--font-display), var(--font-stack-sans-serif);
 }
