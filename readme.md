@@ -1,4 +1,4 @@
-# saffron.css
+# 📐 saffron.css
 
 Simple CSS styles based on √2.
 
