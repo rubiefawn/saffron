@@ -1,4 +1,3 @@
-@use 'sass:map';
 @use 'sass:math';
 
 $√2: math.sqrt(2);
@@ -31,13 +30,55 @@ $lg6: math.pow($√2, +3.0);
 	--lg5: #{$lg5};
 	--lg6: #{$lg6};
 
+	--sm6-rem: calc(var(--sm6) * 1rem);
+	--sm5-rem: calc(var(--sm5) * 1rem);
+	--sm4-rem: calc(var(--sm4) * 1rem);
+	--sm3-rem: calc(var(--sm3) * 1rem);
+	--sm2-rem: calc(var(--sm2) * 1rem);
+	--sm1-rem: calc(var(--sm1) * 1rem);
+	--lg1-rem: calc(var(--lg1) * 1rem);
+	--lg2-rem: calc(var(--lg2) * 1rem);
+	--lg3-rem: calc(var(--lg3) * 1rem);
+	--lg4-rem: calc(var(--lg4) * 1rem);
+	--lg5-rem: calc(var(--lg5) * 1rem);
+	--lg6-rem: calc(var(--lg6) * 1rem);
+
+	--sm6-em: calc(var(--sm6) * 1em);
+	--sm5-em: calc(var(--sm5) * 1em);
+	--sm4-em: calc(var(--sm4) * 1em);
+	--sm3-em: calc(var(--sm3) * 1em);
+	--sm2-em: calc(var(--sm2) * 1em);
+	--sm1-em: calc(var(--sm1) * 1em);
+	--lg1-em: calc(var(--lg1) * 1em);
+	--lg2-em: calc(var(--lg2) * 1em);
+	--lg3-em: calc(var(--lg3) * 1em);
+	--lg4-em: calc(var(--lg4) * 1em);
+	--lg5-em: calc(var(--lg5) * 1em);
+	--lg6-em: calc(var(--lg6) * 1em);
+
 	--zs: var(--sm6);
 	--xs: var(--sm4);
 	--sm: var(--sm2);
-	--md: 1.0;
+	--md: 1;
 	--lg: var(--lg2);
 	--xl: var(--lg4);
 	--zl: var(--lg6);
+
+	--zs-rem: var(--sm6-rem);
+	--xs-rem: var(--sm4-rem);
+	--sm-rem: var(--sm2-rem);
+	--md-rem: 1rem;
+	--lg-rem: var(--lg2-rem);
+	--xl-rem: var(--lg4-rem);
+	--zl-rem: var(--lg6-rem);
+
+	--zs-em: var(--sm6-em);
+	--xs-em: var(--sm4-em);
+	--sm-em: var(--sm2-em);
+	--md-em: 1em;
+	--lg-em: var(--lg2-em);
+	--xl-em: var(--lg4-em);
+	--zl-em: var(--lg6-em);
 }
 
 $fine: (
@@ -56,6 +97,38 @@ $fine: (
 	"lg6": var(--lg6)
 );
 
+$fine-rem: (
+	"sm6": var(--sm6-rem),
+	"sm5": var(--sm5-rem),
+	"sm4": var(--sm4-rem),
+	"sm3": var(--sm3-rem),
+	"sm2": var(--sm2-rem),
+	"sm1": var(--sm1-rem),
+	"md": var(--md-rem),
+	"lg1": var(--lg1-rem),
+	"lg2": var(--lg2-rem),
+	"lg3": var(--lg3-rem),
+	"lg4": var(--lg4-rem),
+	"lg5": var(--lg5-rem),
+	"lg6": var(--lg6-rem)
+);
+
+$fine-em: (
+	"sm6": var(--sm6-em),
+	"sm5": var(--sm5-em),
+	"sm4": var(--sm4-em),
+	"sm3": var(--sm3-em),
+	"sm2": var(--sm2-em),
+	"sm1": var(--sm1-em),
+	"md": var(--md-em),
+	"lg1": var(--lg1-em),
+	"lg2": var(--lg2-em),
+	"lg3": var(--lg3-em),
+	"lg4": var(--lg4-em),
+	"lg5": var(--lg5-em),
+	"lg6": var(--lg6-em)
+);
+
 $std: (
 	"zs": var(--zs),
 	"xs": var(--xs),
@@ -66,23 +139,22 @@ $std: (
 	"zl": var(--zl)
 );
 
-$all: map.merge($fine, $std);
+$std-rem: (
+	"zs": var(--zs-rem),
+	"xs": var(--xs-rem),
+	"sm": var(--sm-rem),
+	"md": var(--md-rem),
+	"lg": var(--lg-rem),
+	"xl": var(--xl-rem),
+	"zl": var(--zl-rem)
+);
 
-@function with-unit($map, $unit) {
-	$items-with-unit: (
-	);
-
-@each $key, $val in $map {
-	$items-with-unit: map.set($items-with-unit, $key, calc($val * $unit));
-}
-
-@return $items-with-unit;
-}
-
-@function with-unit-std($unit) {
-	@return with-unit($std, $unit);
-}
-
-@function with-unit-fine($unit) {
-	@return with-unit($fine, $unit);
-}
+$std-em: (
+	"zs": var(--zs-em),
+	"xs": var(--xs-em),
+	"sm": var(--sm-em),
+	"md": var(--md-em),
+	"lg": var(--lg-em),
+	"xl": var(--xl-em),
+	"zl": var(--zl-em)
+);

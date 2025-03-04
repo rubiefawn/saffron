@@ -1,6 +1,6 @@
 @use 'size';
 
-@each $size-name, $size in size.with-unit-std(1rem) {
+@each $size-name, $size in size.std-rem {
 	.shadow\:#{$size-name} {
 		box-shadow:
 			0 calc($size / 1.5) $size oklch(0% 0 0 / 12%),
