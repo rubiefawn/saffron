@@ -1,13 +1,17 @@
 # 📐 saffron.css
 
-Simple CSS styles based on √2.
+Useful CSS variables and reasonable defaults, based on √2.
 
-## Build
+## Building
 
 ```sh
 $ sass src/saffron.scss build/saffron.css --no-source-map --style=compressed
 ```
 
-# Regarding fonts
+## Regarding Utility Classes
 
-Saffron applies fonts according to the following css variables: `--font-serif`, `--font-sans-serif`, `--font-display`, `--font-monospace`, and `--font-fantasy`. These fonts have defaults set, but these defaults are not provided by Saffron. Either override the variables, or include the default fonts in a separate style sheet. This is done so that fonts that aren't used on a page don't need to be loaded, as well as for easy theming.
+There are utility classes for margin and padding, as well as flex layout (similar to [almonk/pylon](https://github.com/almonk/pylon)) that are not included by default. To enable them, simply uncomment `@use 'space';` and/or `@use 'stack';` in `src/saffron.scss`.
+
+Instead of using the margin and padding utility classes, prefer using the variables directly instead, applied to your own CSS classes as needed.
+
+Instead of using the stack utility classes, prefer learning how CSS grid and flex layouts work and use those directly instead.

@@ -1,81 +1,31 @@
 :root {
-	--mono-zs: oklch(17% 0.01 268);
-	--mono-xs: oklch(29% 0.01 268);
-	--mono-sm: oklch(41% 0.01 268);
-	--mono-md: oklch(53% 0.01 268);
-	--mono-lg: oklch(67% 0.01 268);
-	--mono-xl: oklch(83% 0.01 268);
-	--mono-zl: oklch(97% 0.01 268);
+	/* Color variables */
+	--col-mono-zs: oklch(17% 0.01 268);
+	--col-mono-xs: oklch(29% 0.01 268);
+	--col-mono-sm: oklch(41% 0.01 268);
+	--col-mono-md: oklch(53% 0.01 268);
+	--col-mono-lg: oklch(67% 0.01 268);
+	--col-mono-xl: oklch(83% 0.01 268);
+	--col-mono-zl: oklch(97% 0.01 268);
 
-	--red0: oklch(68% 0.20 015);	
-	--red1: oklch(76% 0.14 015);
-	--orange0: oklch(76% 0.16 055);
-	--orange1: oklch(82% 0.12 055);
-	--yellow0: oklch(82% 0.17 080);
-	--yellow1: oklch(88% 0.12 082);
-	--green0: oklch(79% 0.18 156);
-	--green1: oklch(88% 0.16 156);
-	--cyan0: oklch(79% 0.13 200);
-	--cyan1: oklch(88% 0.14 200);
-	--blue0: oklch(72% 0.15 270);
-	--blue1: oklch(79% 0.12 270);
-	--violet0: oklch(76% 0.17 310);
-	--violet1: oklch(82% 0.12 310);
-	--magenta0: oklch(76% 0.18 345);
-	--magenta1: oklch(82% 0.14 345);
+	--col-red0: oklch(68% 0.20 015);
+	--col-red1: oklch(76% 0.14 015);
+	--col-orange0: oklch(76% 0.16 055);
+	--col-orange1: oklch(82% 0.12 055);
+	--col-yellow0: oklch(82% 0.17 080);
+	--col-yellow1: oklch(88% 0.12 082);
+	--col-green0: oklch(79% 0.18 156);
+	--col-green1: oklch(88% 0.16 156);
+	--col-cyan0: oklch(79% 0.13 200);
+	--col-cyan1: oklch(88% 0.14 200);
+	--col-blue0: oklch(72% 0.15 270);
+	--col-blue1: oklch(79% 0.12 270);
+	--col-violet0: oklch(76% 0.17 310);
+	--col-violet1: oklch(82% 0.12 310);
+	--col-magenta0: oklch(76% 0.18 345);
+	--col-magenta1: oklch(82% 0.14 345);
 
-	--fg-base: var(--mono-zs);
-	--fg-base-dim: var(--mono-lg);
-	--bg-base: var(--mono-zl);
-	--bg-base-focus: var(--mono-xl);
-	--bg-base-border: var(--bg-base-focus);
-
-	--fg-primary: ;
-	--fg-primary-dim: ;
-	--bg-primary: ;
-	--bg-primary-focus: ;
-	--bg-primary-border: var(--fg-primary-dim);
-
-	--fg-accent: var(--mono-zl);
-	--fg-accent-dim: ;
-	--bg-accent: var(--mono-xl);
-	--bg-accent-focus: var(--mono-lg);
-
-	--fg-neutral: ;
-	--fg-neutral-dim: ;
-	--bg-neutral: ;
-	--bg-neutral-focus: ;
-	--bg-neutral-border: var(--fg-neutral-dim);
-
-	--fg-info: var(--mono-zl);
-	--fg-info-dim: ;
-	--bg-info: ;
-	--bg-info-focus: ;
-	--bg-info-border: var(--fg-info-dim);
-
-	--fg-ok: var(--mono-zl);
-	--fg-ok-dim: ;
-	--bg-ok: ;
-	--bg-ok-focus: ;
-	--bg-ok-border: var(--fg-ok-dim);
-
-	--fg-warn: var(--mono-zl);
-	--fg-warn-dim: ;
-	--bg-warn: ;
-	--bg-warn-focus: ;
-	--bg-warn-border: var(--fg-warn-dim);
-
-	--fg-error: var(--mono-zl);
-	--fg-error-dim: ;
-	--bg-error: ;
-	--bg-error-focus: ;
-	--bg-error-border: var(--fg-error-dim);
-}
-
-:root[theme=dark] {
-	--fg-base: var(--mono-zl);
-	--fg-base-dim: var(--mono-lg);
-	--bg-base: var(--mono-zs);
-	--bg-base-focus: var(--mono-xs);
-	--bg-base-border: var(--bg-base-focus);
+	color-scheme: light dark;
+	color: light-dark(var(--col-mono-zs), var(--col-mono-zl));
+	background-color: light-dark(var(--col-mono-zl), var(--col-mono-zs));
 }

@@ -1,60 +1,17 @@
-@use 'sass:math';
-
-$√2: math.sqrt(2);
-$sm6: math.pow($√2, -3.0);
-$sm5: math.pow($√2, -2.5);
-$sm4: math.pow($√2, -2.0);
-$sm3: math.pow($√2, -1.5);
-$sm2: math.pow($√2, -1.0);
-$sm1: math.pow($√2, -0.5);
-$lg1: math.pow($√2, +0.5);
-$lg2: math.pow($√2, +1.0);
-$lg3: math.pow($√2, +1.5);
-$lg4: math.pow($√2, +2.0);
-$lg5: math.pow($√2, +2.5);
-$lg6: math.pow($√2, +3.0);
-
 :root {
-	--√2: #{$√2};
-
-	--sm6: #{$sm6};
-	--sm5: #{$sm5};
-	--sm4: #{$sm4};
-	--sm3: #{$sm3};
-	--sm2: #{$sm2};
-	--sm1: #{$sm1};
-	--lg1: #{$lg1};
-	--lg2: #{$lg2};
-	--lg3: #{$lg3};
-	--lg4: #{$lg4};
-	--lg5: #{$lg5};
-	--lg6: #{$lg6};
-
-	--sm6-rem: calc(var(--sm6) * 1rem);
-	--sm5-rem: calc(var(--sm5) * 1rem);
-	--sm4-rem: calc(var(--sm4) * 1rem);
-	--sm3-rem: calc(var(--sm3) * 1rem);
-	--sm2-rem: calc(var(--sm2) * 1rem);
-	--sm1-rem: calc(var(--sm1) * 1rem);
-	--lg1-rem: calc(var(--lg1) * 1rem);
-	--lg2-rem: calc(var(--lg2) * 1rem);
-	--lg3-rem: calc(var(--lg3) * 1rem);
-	--lg4-rem: calc(var(--lg4) * 1rem);
-	--lg5-rem: calc(var(--lg5) * 1rem);
-	--lg6-rem: calc(var(--lg6) * 1rem);
-
-	--sm6-em: calc(var(--sm6) * 1em);
-	--sm5-em: calc(var(--sm5) * 1em);
-	--sm4-em: calc(var(--sm4) * 1em);
-	--sm3-em: calc(var(--sm3) * 1em);
-	--sm2-em: calc(var(--sm2) * 1em);
-	--sm1-em: calc(var(--sm1) * 1em);
-	--lg1-em: calc(var(--lg1) * 1em);
-	--lg2-em: calc(var(--lg2) * 1em);
-	--lg3-em: calc(var(--lg3) * 1em);
-	--lg4-em: calc(var(--lg4) * 1em);
-	--lg5-em: calc(var(--lg5) * 1em);
-	--lg6-em: calc(var(--lg6) * 1em);
+	--sqrt2: sqrt(2);
+	--sm6: pow(var(--sqrt2), -3.0);
+	--sm5: pow(var(--sqrt2), -2.5);
+	--sm4: pow(var(--sqrt2), -2.0);
+	--sm3: pow(var(--sqrt2), -1.5);
+	--sm2: pow(var(--sqrt2), -1.0);
+	--sm1: pow(var(--sqrt2), -0.5);
+	--lg1: pow(var(--sqrt2), +0.5);
+	--lg2: pow(var(--sqrt2), +1.0);
+	--lg3: pow(var(--sqrt2), +1.5);
+	--lg4: pow(var(--sqrt2), +2.0);
+	--lg5: pow(var(--sqrt2), +2.5);
+	--lg6: pow(var(--sqrt2), +3.0);
 
 	--zs: var(--sm6);
 	--xs: var(--sm4);
@@ -64,6 +21,19 @@ $lg6: math.pow($√2, +3.0);
 	--xl: var(--lg4);
 	--zl: var(--lg6);
 
+	--sm6-rem: calc(1rem * var(--sm6));
+	--sm5-rem: calc(1rem * var(--sm5));
+	--sm4-rem: calc(1rem * var(--sm4));
+	--sm3-rem: calc(1rem * var(--sm3));
+	--sm2-rem: calc(1rem * var(--sm2));
+	--sm1-rem: calc(1rem * var(--sm1));
+	--lg1-rem: calc(1rem * var(--lg1));
+	--lg2-rem: calc(1rem * var(--lg2));
+	--lg3-rem: calc(1rem * var(--lg3));
+	--lg4-rem: calc(1rem * var(--lg4));
+	--lg5-rem: calc(1rem * var(--lg5));
+	--lg6-rem: calc(1rem * var(--lg6));
+
 	--zs-rem: var(--sm6-rem);
 	--xs-rem: var(--sm4-rem);
 	--sm-rem: var(--sm2-rem);
@@ -71,6 +41,19 @@ $lg6: math.pow($√2, +3.0);
 	--lg-rem: var(--lg2-rem);
 	--xl-rem: var(--lg4-rem);
 	--zl-rem: var(--lg6-rem);
+
+	--sm6-em: calc(1em * var(--sm6));
+	--sm5-em: calc(1em * var(--sm5));
+	--sm4-em: calc(1em * var(--sm4));
+	--sm3-em: calc(1em * var(--sm3));
+	--sm2-em: calc(1em * var(--sm2));
+	--sm1-em: calc(1em * var(--sm1));
+	--lg1-em: calc(1em * var(--lg1));
+	--lg2-em: calc(1em * var(--lg2));
+	--lg3-em: calc(1em * var(--lg3));
+	--lg4-em: calc(1em * var(--lg4));
+	--lg5-em: calc(1em * var(--lg5));
+	--lg6-em: calc(1em * var(--lg6));
 
 	--zs-em: var(--sm6-em);
 	--xs-em: var(--sm4-em);
@@ -80,81 +63,3 @@ $lg6: math.pow($√2, +3.0);
 	--xl-em: var(--lg4-em);
 	--zl-em: var(--lg6-em);
 }
-
-$fine: (
-	"sm6": var(--sm6),
-	"sm5": var(--sm5),
-	"sm4": var(--sm4),
-	"sm3": var(--sm3),
-	"sm2": var(--sm2),
-	"sm1": var(--sm1),
-	"md": var(--md),
-	"lg1": var(--lg1),
-	"lg2": var(--lg2),
-	"lg3": var(--lg3),
-	"lg4": var(--lg4),
-	"lg5": var(--lg5),
-	"lg6": var(--lg6)
-);
-
-$fine-rem: (
-	"sm6": var(--sm6-rem),
-	"sm5": var(--sm5-rem),
-	"sm4": var(--sm4-rem),
-	"sm3": var(--sm3-rem),
-	"sm2": var(--sm2-rem),
-	"sm1": var(--sm1-rem),
-	"md": var(--md-rem),
-	"lg1": var(--lg1-rem),
-	"lg2": var(--lg2-rem),
-	"lg3": var(--lg3-rem),
-	"lg4": var(--lg4-rem),
-	"lg5": var(--lg5-rem),
-	"lg6": var(--lg6-rem)
-);
-
-$fine-em: (
-	"sm6": var(--sm6-em),
-	"sm5": var(--sm5-em),
-	"sm4": var(--sm4-em),
-	"sm3": var(--sm3-em),
-	"sm2": var(--sm2-em),
-	"sm1": var(--sm1-em),
-	"md": var(--md-em),
-	"lg1": var(--lg1-em),
-	"lg2": var(--lg2-em),
-	"lg3": var(--lg3-em),
-	"lg4": var(--lg4-em),
-	"lg5": var(--lg5-em),
-	"lg6": var(--lg6-em)
-);
-
-$std: (
-	"zs": var(--zs),
-	"xs": var(--xs),
-	"sm": var(--sm),
-	"md": var(--md),
-	"lg": var(--lg),
-	"xl": var(--xl),
-	"zl": var(--zl)
-);
-
-$std-rem: (
-	"zs": var(--zs-rem),
-	"xs": var(--xs-rem),
-	"sm": var(--sm-rem),
-	"md": var(--md-rem),
-	"lg": var(--lg-rem),
-	"xl": var(--xl-rem),
-	"zl": var(--zl-rem)
-);
-
-$std-em: (
-	"zs": var(--zs-em),
-	"xs": var(--xs-em),
-	"sm": var(--sm-em),
-	"md": var(--md-em),
-	"lg": var(--lg-em),
-	"xl": var(--xl-em),
-	"zl": var(--zl-em)
-);

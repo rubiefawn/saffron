@@ -1,7 +1,26 @@
-@use 'size';
-@use 'sass:map';
+$named-sizes: (
+	"": (
+		"0": 0,
+		"zs": var(--zs-rem),
+		"xs": var(--xs-rem),
+		"sm": var(--sm-rem),
+		"md": var(--md-rem),
+		"lg": var(--lg-rem),
+		"xl": var(--xl-rem),
+		"zl": var(--zl-rem)
+	),
+	"-em": (
+		"zs": var(--zs-em),
+		"xs": var(--xs-em),
+		"sm": var(--sm-em),
+		"md": var(--md-em),
+		"lg": var(--lg-em),
+		"xl": var(--xl-em),
+		"zl": var(--zl-em)
+	)
+);
 
-@each $unit-suffix, $size-list in ("": map.merge(size.$std-rem, ("0": 0)), "-em": size.$std-em) {
+@each $unit-suffix, $size-list in $named-sizes {
 	@each $size-name, $size in $size-list {
 		@each $type, $type-abbr in ("margin": "m", "padding": "p") {
 			@each $side, $side-abbr in ("": "", "-top": "t", "-left": "l", "-bottom": "b", "-right": "r", "-inline-start": "s", "-inline-end": "e") {
@@ -45,4 +64,17 @@
 			gap: $size;
 		}
 	}
+}
+
+.mt\:o {
+	margin-top: var(--margin-text-optical-correction);
+}
+
+.mb\:o {
+	margin-bottom: var(--margin-text-optical-correction);
+}
+
+.mv\:o {
+	margin-top: var(--margin-text-optical-correction);
+	margin-bottom: var(--margin-text-optical-correction);
 }
