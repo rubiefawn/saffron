@@ -1,4 +1,8 @@
 :where(:root) {
+	color-scheme: light dark;
+}
+
+:root {
 	/* Color variables */
 	--col-mono-zs: oklch(17% 0.01 268);
 	--col-mono-xs: oklch(29% 0.01 268);
@@ -25,7 +29,6 @@
 	--col-magenta0: oklch(76% 0.18 345);
 	--col-magenta1: oklch(82% 0.14 345);
 
-	color-scheme: light dark;
 	color: light-dark(var(--col-mono-zs), var(--col-mono-zl));
 	background-color: light-dark(var(--col-mono-zl), var(--col-mono-zs));
 }
