@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>saffron.css test</title>
+    <link rel="stylesheet" href="build/saffron.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+      :root {
+      	--theme-font-sans-serif: "Inter";
+      	--theme-font-display: "Inter Tight";
+      	--theme-font-monospace: "Jetbrains Mono";
+      }
+    </style>
+  </head>
+  <body>
+  <main>
+  <h1>Heading 1</h1>
+  <p>Test paragraph</p>
+  <blockquote>
+  	<p>This is a quote</p>
+  	<cite>Author Name</cite>
+  </blockquote>
+  <h2>Heading 2</h2>
+  <pre>
+Preformatted
+text
+example</pre>
+  <h3>Heading 3</h3>
+  <pre><code>// Example of a code block inside preformatted block
+#include &lt;stdio.h&gt;
+
+int main(const int argc, const char *argv[static argc]) {
+  for (int i = 1; i < argc; ++i) {
+    printf("%d: %s\n", i, argv[i]);
+  }
+}</code></pre>
+  <h4>Heading 4</h4>
+  <ol>
+  	<li><a href=#>Anchor element</a></li>
+  	<li><strong>Strong element</strong></li>
+  	<li><em>Emphasis element</em></li>
+  	<li><i>Idiomatic text element</i></li>
+  	<li><u>Unarticulated annotation element</u></li>
+  	<li><ins>Inserted text element</ins></li>
+    <li><del>Deleted text element</del></li>
+  </ol>
+  <h5>Heading 5</h5>
+  <ul>
+  	<li><s>Strikethrough element</s></li>
+  	<li><small>Side comment element</small></li>
+  	<li>Superscript <sup>element</sup></li>
+  	<li>Subscript <sub>element</sub></li>
+  	<li><abbr title="Abbreviation element">Abbr.</abbr></li>
+    <li><kbd>Alt+F4</kbd> (keyboard input element)</li>
+    <li><mark>Mark text element</mark></li>
+  </ul>
+  <h6>Heading 6</h6>
+  </main>
+  <footer><a href="https://github.com/rubiefawn/saffron">saffron.css</a> test document</footer>
+  </body>
+</html>

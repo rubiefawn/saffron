@@ -10,7 +10,7 @@ $ sass src/saffron.scss build/saffron.css --no-source-map --style=compressed
 
 ## Regarding Utility Classes
 
-There are utility classes for margin and padding, as well as flex layout (similar to [almonk/pylon](https://github.com/almonk/pylon)) that are not included by default. To enable them, simply uncomment `@use 'space';` and/or `@use 'stack';` in `src/saffron.scss`.
+There are utility classes for margin and padding, as well as flex layout (similar to [almonk/pylon](https://github.com/almonk/pylon)) that are not included by default. To enable them, simply uncomment `@use 'utils';` and/or `@use 'stack';` in `src/saffron.scss`.
 
 Instead of using the margin and padding utility classes, prefer using the variables directly instead, applied to your own CSS classes as needed.
 

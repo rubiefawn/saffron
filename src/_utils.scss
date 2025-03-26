@@ -1,23 +1,19 @@
 $named-sizes: (
-	"": (
-		"0": 0,
+	"": ("0": 0,
 		"zs": var(--zs-rem),
 		"xs": var(--xs-rem),
 		"sm": var(--sm-rem),
 		"md": var(--md-rem),
 		"lg": var(--lg-rem),
 		"xl": var(--xl-rem),
-		"zl": var(--zl-rem)
-	),
-	"-em": (
-		"zs": var(--zs-em),
+		"zl": var(--zl-rem)),
+	"-em": ("zs": var(--zs-em),
 		"xs": var(--xs-em),
 		"sm": var(--sm-em),
 		"md": var(--md-em),
 		"lg": var(--lg-em),
 		"xl": var(--xl-em),
-		"zl": var(--zl-em)
-	)
+		"zl": var(--zl-em))
 );
 
 @each $unit-suffix, $size-list in $named-sizes {
@@ -77,4 +73,16 @@ $named-sizes: (
 .mv\:o {
 	margin-top: var(--margin-text-optical-correction);
 	margin-bottom: var(--margin-text-optical-correction);
+}
+
+@each $size-name, $size in ("zs": .625rem, "xs": .875rem, "sm": 1rem, "md": 1.5rem, "lg": 2rem, "xl": 3rem, "zl": 4rem) {
+	.fs\:#{$size-name} {
+		font-size: $size;
+	}
+}
+
+@each $weight-name, $weight in ("zs": 200, "xs": 300, "sm": 400, "md": 500, "lg": 600, "xl": 800, "zl": 1000) {
+	.fw\:#{$weight-name} {
+		font-weight: $weight;
+	}
 }

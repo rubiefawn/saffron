@@ -29,3 +29,24 @@
 	color: light-dark(var(--col-mono-zs), var(--col-mono-zl));
 	background-color: light-dark(var(--col-mono-zl), var(--col-mono-zs));
 }
+
+:where([theme="dark"], [data-theme="dark"]) {
+	color-scheme: dark;
+}
+
+:where([theme="light"], [data-theme="light"]) {
+	color-scheme: light;
+}
+
+pre {
+	background-color: light-dark(var(--col-mono-xl), var(--col-mono-xs));
+}
+
+kbd {
+	background-color: light-dark(var(--col-mono-zs), var(--col-mono-zl));
+	color: light-dark(var(--col-mono-zl), var(--col-mono-zs));
+}
+
+blockquote {
+	border-inline-start: var(--zs-rem) solid light-dark(var(--col-mono-xl), var(--col-mono-xs));
+}
