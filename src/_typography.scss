@@ -21,6 +21,7 @@
 :where(h1, h2, h3, h4, h5, h6) {
 	font-family: var(--font-stack-display);
 	font-weight: bold;
+	line-height: 1;
 }
 
 :where(h1, h2, h3, h4, h5, h6, p, pre, ol, ul, blockquote) {
@@ -35,31 +36,26 @@ kbd {
 	font-weight: bold;
 }
 
-/*
-  Roughly based on the following guidelines:
-  https://html.spec.whatwg.org/multipage/rendering.html#sections-and-headings
-*/
-
 h1 {
-	font-size: var(--zl-em);
+	font-size: var(--lg5-em);
 }
 
 h2 {
-	font-size: var(--xl-em);
+	font-size: var(--lg4-em);
 }
 
 h3 {
-	font-size: var(--lg-em);
+	font-size: var(--lg3-em);
 }
 
 h4 {
-	font-size: var(--md-em);
+	font-size: var(--lg2-em);
 }
 
 h5 {
-	font-size: var(--sm1-em);
+	font-size: var(--lg1-em);
 }
 
 h6 {
-	font-size: var(--sm2-em);
+	font-size: var(--md-em);
 }

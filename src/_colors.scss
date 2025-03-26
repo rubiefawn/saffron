@@ -1,4 +1,4 @@
-:root {
+:where(:root) {
 	/* Color variables */
 	--col-mono-zs: oklch(17% 0.01 268);
 	--col-mono-xs: oklch(29% 0.01 268);
@@ -49,4 +49,14 @@ kbd {
 
 blockquote {
 	border-inline-start: var(--zs-rem) solid light-dark(var(--col-mono-xl), var(--col-mono-xs));
+}
+
+ins {
+	text-decoration: none;
+	color: seagreen;
+}
+
+del {
+	text-decoration: none;
+	color: indianred;
 }
