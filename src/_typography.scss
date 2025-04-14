@@ -1,16 +1,16 @@
-:where(:root) {
-	/* The following variables should be overidden by the website */
+/*
+	The following variables should be set:
 	--theme-font-serif: serif;
 	--theme-font-sans-serif: sans-serif;
 	--theme-font-display: sans-serif;
 	--theme-font-monospace: monospace;
-}
+*/
 
 :root {
-	--font-stack-serif: var(--theme-font-serif), ui-serif, serif;
-	--font-stack-sans-serif: var(--theme-font-sans-serif), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", ui-sans-serif, sans-serif, var(--font-stack-emoji);
-	--font-stack-monospace: var(--theme-font-monospace), SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", ui-monospace, monospace, var(--font-stack-emoji);
-	--font-stack-display: var(--theme-font-display), var(--font-stack-sans-serif);
+	--font-stack-serif: var(--theme-font-serif, serif), ui-serif, serif;
+	--font-stack-sans-serif: var(--theme-font-sans-serif, sans-serif), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", ui-sans-serif, sans-serif, var(--font-stack-emoji);
+	--font-stack-monospace: var(--theme-font-monospace, monospace), SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", ui-monospace, monospace, var(--font-stack-emoji);
+	--font-stack-display: var(--theme-font-display, sans-serif), var(--font-stack-sans-serif, sans-serif);
 	--font-stack-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", emoji;
 
 	--margin-text-optical-correction: calc(1em - 1lh);
