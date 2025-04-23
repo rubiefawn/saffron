@@ -22,7 +22,8 @@
 	line-height: 1;
 }
 
-:where(h1, h2, h3, h4, h5, h6, p, pre, ol, ul, blockquote) {
+:where(h1, h2, h3, h4, h5, h6, p, pre, blockquote),
+:not(ol, ul)> :where(ol, ul) {
 	margin-block-end: var(--md-rem);
 }
 
