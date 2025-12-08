@@ -1,16 +1,8 @@
 @use 'reset';
 /* @use 'debug'; */
-/* @use 'utils'; */
 @use 'typography';
 @use 'colors';
 @use 'stack';
-
-/* TODO: This should probably be removed */
-body> :where(main, header, footer) {
-  margin: 0 auto;
-  padding: var(--zs-rem);
-  max-width: 80ch;
-}
 
 pre,
 kbd {

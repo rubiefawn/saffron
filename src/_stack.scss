@@ -1,6 +1,6 @@
 @use 'size';
 
-:is(.hstack, .vstack) {
+.hstack, .vstack {
 	align-self: stretch;
 	display: flex;
 	flex-wrap: wrap;
